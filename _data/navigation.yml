@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: About
+  link: /about.markdown
+- name: Case Studies
+  link: /cases.markdown
+- name: Photography
+  link: /photo.html
+- name: Contacts
+  link: /contact.html

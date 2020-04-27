@@ -1,0 +1,14 @@
+docs_list_title: ACME Documentation
+docs:
+
+- title: About
+  url: about.html
+
+- title: Case Studies
+  url: cases.html
+  
+- title: Photography
+  url: photo.html
+  
+- title: Contacts
+  url: contact.html
