@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+
+<strong>Design Works</strong>
+
+
+<nav>
+    <ul>
+        {% for design in site.design %}
+        <li>
+            <a href="{{site.baseurl}}/design/{{design.slug}}" class="{% if page.url contains design.slug %}current{% endif %}">{{design.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
+
+
+{{content}}
