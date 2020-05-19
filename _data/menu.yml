@@ -1,4 +1,4 @@
-docs_list_title: Navegação
+docs_list_title: 
 docs:
 
 - title: About
@@ -10,5 +10,5 @@ docs:
 - title: Photography
   url: photo.html
   
-- title: Contacts
+- title: Contact
   url: contact.html
