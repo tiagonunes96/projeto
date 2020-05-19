@@ -2,13 +2,13 @@ docs_list_title:
 docs:
 
 - title: About
-  url: about.html
+  url: about
 
 - title: Case Studies
-  url: cases.html
+  url: cases
   
 - title: Photography
-  url: photo.html
+  url: photo
   
 - title: Contact
-  url: contact.html
+  url: contact
