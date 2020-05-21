@@ -20,10 +20,14 @@ header {
     position: relative;
 }
 
-#nav_desktop h3 {
+.name p {
     color: $accent-color;
     font-weight: 700;
     letter-spacing: 1px;
+}
+
+.name p:hover {
+    color: $text-color;
 }
 
 /* Top Bar */
