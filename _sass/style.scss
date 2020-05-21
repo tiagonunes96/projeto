@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -144,6 +146,20 @@ header #nav_mobile {
 #menuToggle input:checked ~ ul {
     transform: none;
 }
+
+/*Homepage*/
+.about p {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 64px;
+}
+
+.about a {
+    font-weight: 700;
+}
+
+
 
 /*About*/
 
