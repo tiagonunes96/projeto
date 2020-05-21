@@ -33,9 +33,9 @@ plugins:
   - jekyll-feed
   
 collections:
-    design:
+    works:
         output: true
-        permalink: /design/:path/
+        permalink: /works/:path/
         
 # Exclude from processing.
 # The following items will not be processed, by default.

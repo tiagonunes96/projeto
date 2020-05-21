@@ -1,22 +1,27 @@
-<header class="site-header" role="banner">
-
-  <div class="wrapper">
-    
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-
-    {%- if page_paths -%}
-    
-    <nav class="site-nav">
-        
-      {% include nav.html %}
-      
+<header>
+  <div class="topbar">
+    <nav id="nav_desktop" role="desktop_navigation">
+      <a href="{{site.baseurl}}/index.html">{{ item.title }}
+        <h2>Tiago Nunes</h2>
+      </a>
+      <ul>
+        {% for item in site.data.menu.pages %}
+        <li><a href="{{site.baseurl}}/{{item.url}}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
     </nav>
-    
-    {%- endif -%}
-  
+    <nav id="nav_mobile" role="mobile_navigation">
+      <div id="menuToggle">
+        <input id="mobile_menu_toggle" type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          {% for item in site.data.menu.pages %}
+          <li><a href="{{site.baseurl}}/{{item.url}}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
   </div>
-
 </header>

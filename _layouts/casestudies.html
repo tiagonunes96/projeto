@@ -9,3 +9,26 @@ layout: default
 <div class="post-content e-content" itemprop="articleBody">
 	{{ content }}
 </div>
+
+<section class="work">
+   
+    <h2>Work</h2>
+
+    <div class="column_work">
+        {% for work in site.works %}
+        <div class="card">
+            <figure>
+                <a href="{{site.baseurl}}/works/{{work.slug}}"
+                    class="{% if page.url contains work.slug %}current{% endif %}">
+                    <img src="{{work.image}}" alt="{{work.image_alt}}">
+                </a>
+                <figcaption>
+                    <h3><mark>&nbsp;{{work.project_title}}&nbsp;</mark></h3>
+                    <p>{{work.project_description}}</p>
+                </figcaption>
+            </figure>
+        </div>
+        {% endfor %}
+    </div>
+    
+</section>

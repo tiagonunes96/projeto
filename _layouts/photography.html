@@ -1,27 +1,38 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+<div class="main-photography">
+    <div class="content">
+        <div class="title">
+            <h2><b>Works</b></h2>
+        </div>
+        <section class="photo-cat mtb">
+            <div class="photo-slideshow">
+                <img src=" {{ site.baseurl }}/images/photography/mtb.png" alt="Mountain Biking Photography">
+            </div>
+            <div class="photo-cat title">
+                <h3><b>Mountain Bike</b></h3>
+            </div>
+        </section>
+        <section class="photo-cat auto">
+            <div class="photo-slideshow">
+                <img src=" {{ site.baseurl }}/images/photography/auto.png" alt="Motorsport Photography">
+            </div>
+            <div class="photo-cat title">
+                <h3><b>Motorsport</b></h3>
+            </div>
+        </section>
+        <section class="photo-cat landscape">
+            <div class="photo-slideshow">
+                <img src=" {{ site.baseurl }}/images/photography/landscape.png" alt="Landscape Photography">
+            </div>
+            <div class="photo-cat title">
+                <h3><b>Landscape</b></h3>
+            </div>
+        </section>
+        <div class="prints">
+            <h3>Available for collaborations, send me an <a href="mailto:tiagonunes96@live.com.pt" target="_blank"> → email for more info</a>.</h3>
+        </div>
+    </div>
+</div>

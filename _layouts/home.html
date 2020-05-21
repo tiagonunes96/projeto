@@ -1,18 +1,43 @@
 ---
 layout: default
 ---
+<section class="about">
+    <p>Hello! <b>I'm Tiago Nunes.</b>
+        <br>
+        I am a 24 yo UX/UI Designer from Madeira Island, who finished his bachelor's degree in Communication Design. At the moment I am attending an postgraduate course in Digital Experience Design at Faculty of Fine-Arts in Lisbon.</p>
+</section>
+
 
 <div class="home">
-  {%- if page.title -%}
+    {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+    {%- endif -%}
 
-<h2>{{ site.data.samplelist.docs_list_title }}</h2>
-<ul>
-   {% for item in site.data.samplelist.docs %}
-      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-   {% endfor %}
-</ul>
+    <h2>{{ site.data.samplelist.docs_list_title }}</h2>
+    <ul>
+        {% for item in site.data.samplelist.docs %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <section class="work">
+
+        <div class="column_work">
+            {% for work in site.works %}
+            <div class="work-preview">
+                <figure>
+                    <a href="{{site.baseurl}}/works/{{work.slug}}" class="{% if page.url contains work.slug %}current{% endif %}"></a>
+                    <figcaption>
+                       <p>{{ work.order }}</p>
+                        <h2><b>{{work.title}}</b> {{work.description}}</h2>
+                    </figcaption>
+                </figure>
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
 
 </div>
-        
+
+
