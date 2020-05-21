@@ -1,26 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  {%- include header.html -%}
+{%- include header.html -%}
 
 
-  <body>
+<body>
 
     <main class="page-content" aria-label="Content">
 
-      <div class="wrapper">
+        <div class="wrapper">
 
-        {{ content }}
+            {{ content }}
 
-      </div>
+        </div>
 
     </main>
 
-    {%- include footer.html -%}
-
-  </body>
+    
+    {% unless page.title == "Contact" %}
+        {%- include footer.html -%}
+    {% endunless %}
+    
+</body>
 
 </html>
