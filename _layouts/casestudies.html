@@ -2,33 +2,28 @@
 layout: default
 ---
 
-<header class="post-header">
-	<h1 class="post-title p-name" itemprop="name headline">{{ page.title }}</h1>
-</header>
-
-<div class="post-content e-content" itemprop="articleBody">
-	{{ content }}
-</div>
+<div class="work">
 
 <section class="work">
-   
-    <h2>Work</h2>
 
-    <div class="column_work">
-        {% for work in site.works %}
-        <div class="card">
-            <figure>
-                <a href="{{site.baseurl}}/works/{{work.slug}}"
-                    class="{% if page.url contains work.slug %}current{% endif %}">
-                    <img src="{{work.image}}" alt="{{work.image_alt}}">
-                </a>
-                <figcaption>
-                    <h3><mark>&nbsp;{{work.project_title}}&nbsp;</mark></h3>
-                    <p>{{work.project_description}}</p>
-                </figcaption>
-            </figure>
+        <div class="column_work">
+            {% for work in site.works %}
+            <div class="work-preview">
+                      <section class="work-order">
+                          <p>Case {{ work.order }} of 4</p>
+                      </section>
+                      <section class="work-info">
+                          <h2><b>{{work.title}}</b> {{work.description}}</h2>
+                      </section>
+                       <section class="work-page">
+                           <a href="{{site.baseurl}}/works/{{work.slug}}" class="{% if page.url contains work.slug %}current{% endif %}">Read More &rarr;</a>
+                       </section>
+                        
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
+
+    </section>
     
-</section>
+</div>
+
