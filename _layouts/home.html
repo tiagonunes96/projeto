@@ -13,28 +13,31 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
     {%- endif -%}
 
+<!--
     <h2>{{ site.data.samplelist.docs_list_title }}</h2>
     <ul>
         {% for item in site.data.samplelist.docs %}
         <li><a href="{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
     </ul>
+-->
 
     <section class="work">
 
         <div class="column_work">
             {% for work in site.works %}
             <div class="work-preview">
-                      <section class="work-order">
-                          <p>Case {{ work.order }} of 4</p>
-                      </section>
-                      <section class="work-info">
-                          <h2><b>{{work.title}}</b> {{work.description}}</h2>
-                      </section>
-                       <section class="work-page">
-                           <a href="{{site.baseurl}}/works/{{work.slug}}" class="{% if page.url contains work.slug %}current{% endif %}">Read More &rarr;</a>
-                       </section>
-                        
+                <section class="{{work.label}}">
+                    <section class="work-order">
+                        <p>Case {{work.order}} of 4</p>
+                    </section>
+                    <section class="work-info">
+                        <h2><b>{{work.title}}</b> {{work.description}}</h2>
+                    </section>
+                    <section class="work-page">
+                        <a href="{{site.baseurl}}/works/{{work.slug}}" class="{% if page.url contains work.slug %}current{% endif %} ">Read More &rarr;</a>
+                    </section>
+                </section>
             </div>
             {% endfor %}
         </div>
@@ -42,5 +45,3 @@ layout: default
     </section>
 
 </div>
-
-
