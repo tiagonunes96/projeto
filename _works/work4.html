@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "da Horta —"
+title: "da Horta"
 order: 4
 label: project04
-image: mtb.jpg
+image: dahorta.jpg
 image_alt: da Horta App
-description: Designing a fresh products platform to increase the sales of local farmers.
+description:  — Designing a fresh products platform to increase the sales of local farmers.
 ---
 
 <article>
@@ -21,19 +21,9 @@ description: Designing a fresh products platform to increase the sales of local 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </section>
     
-    <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/dahorta.png" alt="Floppy Disk" class="work-img">
-   </section>
-   <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/dahorta.png" alt="Floppy Disk" class="work-img">
-   </section>
-   <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/dahorta.png" alt="Floppy Disk" class="work-img">
-   </section>
-   <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/dahorta.png" alt="Floppy Disk" class="work-img">
-   </section>
-   <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/dahorta.png" alt="Floppy Disk" class="work-img">
-   </section>
+      {% for image in site.works %}
+       <figure>
+           <img src="{{ site.baseurl }}/images/work/{{ image.image }}" alt="da Horta - App" class="work-img">
+       </figure>
+       {% endfor %}
 </article>

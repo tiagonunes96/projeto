@@ -1,18 +1,18 @@
 ---
 layout: default
-title: "Eatsafe —"
+title: "Eatsafe"
 order: 3
 label: project03
-image: mtb.jpg
+image: eatsafe.jpg
 image_alt: Eatsafe
-description: The ultimate prevention platform to identify allergens present in your meals.
+description:  — The ultimate prevention platform to identify allergens present in your meals.
 ---
 
 <article>
-   <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/eatsafe.png" alt="Floppy Disk" class="work-img">
-   </section>
-    
+    <section class="project-photo">
+        <img src="{{ site.baseurl }}/images/work/eatsafe.png" alt="Floppy Disk" class="work-img">
+    </section>
+
     <section class="project-description">
         <h2>Eatsafe - Food scan app</h2>
 
@@ -20,20 +20,10 @@ description: The ultimate prevention platform to identify allergens present in y
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </section>
-    
-    <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/eatsafe.png" alt="Floppy Disk" class="work-img">
-   </section>
-   <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/eatsafe.png" alt="Floppy Disk" class="work-img">
-   </section>
-   <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/eatsafe.png" alt="Floppy Disk" class="work-img">
-   </section>
-   <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/eatsafe.png" alt="Floppy Disk" class="work-img">
-   </section>
-   <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/eatsafe.png" alt="Floppy Disk" class="work-img">
-   </section>
+
+    {% for image in site.works %}
+    <figure>
+        <img src="{{ site.baseurl }}/images/work/{{ image.image }}" alt="Eatsafe - App" class="work-img">
+    </figure>
+    {% endfor %}
 </article>

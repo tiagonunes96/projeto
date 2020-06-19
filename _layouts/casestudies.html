@@ -9,16 +9,17 @@ layout: default
         <div class="column_work">
             {% for work in site.works %}
             <div class="work-preview">
-                      <section class="work-order">
-                          <p>Case {{ work.order }} of 4</p>
-                      </section>
-                      <section class="work-info">
+                     <section class="{{work.label}}">
+                         <div class="work-order">
+                          <p>&darr; Case {{ work.order }} of 4 &darr;</p>
+                      </div>
+                      <div class="work-info">
                           <h2><b>{{work.title}}</b> {{work.description}}</h2>
-                      </section>
-                       <section class="work-page">
+                      </div>
+                       <div class="work-page">
                            <a href="{{site.baseurl}}/works/{{work.slug}}" class="{% if page.url contains work.slug %}current{% endif %}">Read More &rarr;</a>
-                       </section>
-                        
+                       </div>
+                     </section>
             </div>
             {% endfor %}
         </div>

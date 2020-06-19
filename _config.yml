@@ -36,6 +36,9 @@ collections:
     works:
         output: true
         permalink: /works/:path/
+    photography:
+        output: true
+        permalink: /photography/:path/
         
 # Exclude from processing.
 # The following items will not be processed, by default.
