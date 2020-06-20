@@ -2,13 +2,14 @@
 @import 'navigation';
 
 .wrapper {
-    max-width: 1230px;
+    width: 100%;
+    max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  justify-content: center;
+//    display: flex;
+//    flex-wrap: wrap;
+//    align-items: center;
+//    justify-content: center;
 }
 
 /* Header */
@@ -30,8 +31,7 @@ header {
 /*Homepage*/
 
 .about {
-    width: 100%;
-    margin: 163px 0 163px;
+    margin: 93px 0 163px;
     padding: 16px;
 
     p {
@@ -107,28 +107,39 @@ header {
 
 .about-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 40px 0 0;
-    padding: 16px 16px 0;
-    
-    .portrait img {
-        width: 420px;
+    padding: 0 16px;
+    background-color: aqua;
+
+    img {
+        width: 320px;
         background-color: $text-color;
     }
 
-    .about-name h1 {
-        color: $accent-color;
-        font-size: 60px;
-        line-height: 57px;
-        letter-spacing: 5px;
-        font-family: 'GT America', sans-serif;
-        font-weight: 800;
-        margin: 24px 0 24px;
-    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        background-color: blueviolet;
 
-    .about-text p {
-        font-size: 18px;
+        h1 {
+            color: $accent-color;
+            font-size: 60px;
+            line-height: 57px;
+            letter-spacing: 5px;
+            font-family: 'GT America', sans-serif;
+            font-weight: 800;
+            padding: 24px 0;
+        }
+
+        p {
+            font-size: 18px;
+            display: inline;
+        }
     }
 }
 
@@ -160,13 +171,13 @@ p {
 
 .main-photography {
     margin: 0 16px;
-    
+
     h2 {
         font-weight: 700;
         letter-spacing: 2px;
         margin: 50px 0 16px;
     }
-    
+
     .photo {
         width: 100%;
         max-width: 720px;
@@ -188,6 +199,8 @@ footer {
     display: table;
     margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 32px;
+    position: sticky;
 
     p {
         width: 100%;
@@ -228,7 +241,7 @@ footer {
 
         a {
             font-weight: 600;
-            
+
             &:hover {
                 color: $accent-color;
                 text-decoration: underline;
