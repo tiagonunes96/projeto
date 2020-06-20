@@ -9,8 +9,8 @@ pages:
 - title: Works
   url: work
   
-- title: Photography
-  url: photo
+#- title: Photography
+#  url: photo
   
 - title: Contact
   url: contact

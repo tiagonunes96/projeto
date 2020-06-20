@@ -6,10 +6,6 @@
     max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
-    //    display: flex;
-    //    flex-wrap: wrap;
-    //    align-items: center;
-    //    justify-content: center;
 }
 
 /* Header */
@@ -107,9 +103,7 @@ header {
 
 .about-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: row;
+    flex-wrap: wrap;
     padding: 0 16px;
 
     img {
@@ -119,19 +113,14 @@ header {
 
     .text-container {
         width: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        margin-left: 24px;
 
         h1 {
             color: $accent-color;
             font-size: 60px;
             line-height: 57px;
             letter-spacing: 5px;
-            font-family: 'GT America', sans-serif;
-            font-weight: 800;
+            font-family: $base-font-family;
+            font-weight: 700;
             padding: 24px 0;
         }
 
@@ -154,7 +143,7 @@ header {
     padding: 0 16px;
 
     h2 {
-        font-size: 36px;
+        font-size: 22px;
         font-weight: 900;
         line-height: 1.25;
         letter-spacing: .1em;
@@ -172,7 +161,6 @@ header {
     }
 
     p {
-        width: 1000px;
         font-size: 18px;
     }
 
@@ -182,7 +170,12 @@ header {
 /*Photography*/
 
 .main-photography {
-    margin: 0 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 0 16px;
 
     h2 {
         font-weight: 700;
@@ -190,6 +183,10 @@ header {
         margin: 50px 0 16px;
     }
 
+    .photo-container {
+        width: 100%;
+    }
+    
     .photo {
         width: 100%;
         max-width: 720px;
@@ -200,6 +197,10 @@ header {
 
     .collaborations {
         margin: 56px 0 0;
+        
+        a {
+            font-weight: 600;
+        }
     }
 }
 
@@ -216,7 +217,7 @@ footer {
 
     p {
         width: 100%;
-        font-family: 'GT America', sans-serif;
+        font-family: $base-font-family;
         font-size: 14px;
         color: #121212;
     }
@@ -240,7 +241,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 16px;
+    padding: 0 16px;
 
     .contact-title {
         color: $accent-color;
@@ -272,6 +273,8 @@ footer {
     }
 }
 
+/*Media Queries*/
+
 
 @media screen and (min-width: 720px) {
 
@@ -281,7 +284,7 @@ footer {
         p {
             width: 90%;
             margin: 0 auto;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 500;
         }
     }
@@ -290,4 +293,49 @@ footer {
     .contact-wrapper {
         margin: 0 auto;
     }
+
+    .project-description {
+
+        h2 {
+            font-size: 28px;
+        }
+    }
+    
+    .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    padding: 0 16px;
+        margin: 50px 0;
+
+    img {
+        width: 320px;
+        background-color: $text-color;
+    }
+
+    .text-container {
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-left: 24px;
+
+        h1 {
+            color: $accent-color;
+            font-size: 60px;
+            line-height: 57px;
+            letter-spacing: 5px;
+            font-family: $base-font-family;
+            font-weight: 800;
+            padding: 24px 0;
+        }
+
+        p {
+            font-size: 18px;
+            display: inline;
+        }
+    }
+}
 }
