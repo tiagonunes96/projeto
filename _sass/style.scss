@@ -1,6 +1,15 @@
 // Import partials.
 @import 'navigation';
 
+.wrapper {
+    max-width: 1230px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  justify-content: center;
+}
 
 /* Header */
 header {
@@ -102,7 +111,7 @@ header {
     flex-wrap: wrap;
     margin: 40px 0 0;
     padding: 16px 16px 0;
-
+    
     .portrait img {
         width: 420px;
         background-color: $text-color;
@@ -150,17 +159,20 @@ p {
 /*Photography*/
 
 .main-photography {
-    margin: 0 16p x;
+    margin: 0 16px;
     
     h2 {
         font-weight: 700;
         letter-spacing: 2px;
-        margin: 50px 0 24px;
+        margin: 50px 0 16px;
     }
     
     .photo {
         width: 100%;
+        max-width: 720px;
+        height: auto;
         margin: 24px 0 16px;
+        object-fit: cover;
     }
 
     .collaborations {
@@ -216,6 +228,12 @@ footer {
 
         a {
             font-weight: 600;
+            
+            &:hover {
+                color: $accent-color;
+                text-decoration: underline;
+                transition: .3s ease-out;
+            }
         }
     }
 

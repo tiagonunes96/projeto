@@ -4,7 +4,7 @@
 /* Top Bar */
 
 #topbar {
-    width: 100vw;
+    width: auto;
     height: 70px;
     position: sticky;
     z-index: 3;
@@ -136,7 +136,7 @@ header #nav_mobile {
 
 /*Media Queries - DESKTOP*/
 
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 720px) {
 
     /*Header*/
     header {
@@ -147,10 +147,21 @@ header #nav_mobile {
         position: relative;
         background-color: initial;
     }
+    
+    .logo {
+        font-weight: 900;
+        letter-spacing: 1px;
+        
+        &:hover {
+            color: $accent-color;
+            transition: .3s ease-in;
+        }
+    }
 
     header #nav_desktop {
         display: block;
         display: flex;
+        margin: 16px;
         flex-direction: row;
         align-items: center;
     }
@@ -163,6 +174,11 @@ header #nav_mobile {
     header #nav_desktop li {
         display: inline;
         margin: 16px;
+        font-weight: 400;
+        
+        &:hover {
+            text-decoration: line-through;
+        }
     }
 
     header #nav_mobile {

@@ -1,9 +1,11 @@
 <header>
   <div id="topbar">
     <nav id="nav_desktop" role="desktop_navigation">
-      <a class="name" href="{{site.baseurl}}/index.html">{{ item.title }}
-        <a href="index.md">Tiago Nunes</a>
+<!--
+      <a class="name" href="{{site.baseurl}}/index.md">{{ item.title }}
+        <a class="logo" href="index.md">/ TiagoNunes</a>
       </a>
+-->
       <ul>
         {% for item in site.data.menu.pages %}
         <li><a href="{{site.baseurl}}/{{item.url}}">{{ item.title }}</a></li>
