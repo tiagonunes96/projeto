@@ -1,17 +1,16 @@
 ---
 layout: default
 title: "Floppy Disk"
-project_title: Floppy Disk
 order: 1
 label: project01
-image: floppydisk.jpg
+image: floppydisk.png
 alt: Floppy Disk
 description:  "— Rethink the old as art piece. Featuring eye-catching designs and special editions."
 ---
 
 <article>
    <figure class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/floppydisk.jpg" alt="Floppy Disk" class="work-img">
+       <img src="{{ site.baseurl }}/images/thumbnail/floppydisk.png" alt="Floppy Disk" class="work-img">
    </figure>
     
     <div class="project-description">
@@ -20,12 +19,12 @@ description:  "— Rethink the old as art piece. Featuring eye-catching designs 
 
         <p class="text-understate">UX/UI Design</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>The digital product named as FloppyDisk arises as solution for the challege proposed at User Interface subject. This creative, revival and playful idea was thought to be a product focussed to enhance the ubiquitous Floppy Disk and raise the value as a rare piece plus unique collector item. In the end we had been challeged to create an e-commerce platform to sell the product in study.</p>
     </div>
     
     {% for image in site.works %}
        <figure>
-           <img src="{{ site.baseurl }}/images/work/{{ image.image }}" alt="da Horta" class="work-img">
+           <img src="{{ site.baseurl }}/images/thumbnail/{{ image.image }}" alt="da Horta" class="work-img">
        </figure>
        {% endfor %}
 </article>

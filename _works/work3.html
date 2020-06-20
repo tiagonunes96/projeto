@@ -3,27 +3,29 @@ layout: default
 title: "Eatsafe"
 order: 3
 label: project03
-image: eatsafe.jpg
+image: eatsafe.png
 image_alt: Eatsafe
 description:  "— The ultimate prevention platform to identify allergens present in your meals."
 ---
 
 <article>
-    <section class="project-photo">
-        <img src="{{ site.baseurl }}/images/work/eatsafe.png" alt="Floppy Disk" class="work-img">
-    </section>
+    <div class="project-photo">
+        <img src="{{ site.baseurl }}/images/thumbnail/eatsafe.png" alt="Floppy Disk" class="work-img">
+    </div>
 
-    <section class="project-description">
+    <div class="project-description">
         <h2>Eatsafe - Food scan app</h2>
 
         <p class="text-understate">UX/UI Design</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </section>
+        <p>Eatsafe arises as the unique food scan app powered by Champalimaud Foundation.
+        The major goal with this project was to reduce the number of allergy reactions while offering the opportunity for the user to create a profile with every food allergy and scan the dish in advance.
+        </p>
+    </div>
 
     {% for image in site.works %}
     <figure>
-        <img src="{{ site.baseurl }}/images/work/{{ image.image }}" alt="Eatsafe - App" class="work-img">
+        <img src="{{ site.baseurl }}/images/thumbnail/{{ image.image }}" alt="Eatsafe - App" class="work-img">
     </figure>
     {% endfor %}
 </article>

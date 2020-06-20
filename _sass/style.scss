@@ -6,10 +6,10 @@
     max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
-//    display: flex;
-//    flex-wrap: wrap;
-//    align-items: center;
-//    justify-content: center;
+    //    display: flex;
+    //    flex-wrap: wrap;
+    //    align-items: center;
+    //    justify-content: center;
 }
 
 /* Header */
@@ -108,11 +108,9 @@ header {
 .about-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: row;
-    flex-wrap: wrap;
     padding: 0 16px;
-    background-color: aqua;
 
     img {
         width: 320px;
@@ -120,11 +118,12 @@ header {
     }
 
     .text-container {
+        width: 700px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-start;
-        background-color: blueviolet;
+        margin-left: 24px;
 
         h1 {
             color: $accent-color;
@@ -146,26 +145,39 @@ header {
 
 /*Work Pages*/
 
-.project-description h2 {
-    font-size: 36px;
-    font-weight: 900;
-    line-height: 1.25;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    margin: 0;
-    margin-bottom: 8px;
+.work-img {
+    width: 100%;
 }
 
-.text-understate {
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: .15em;
-    text-transform: uppercase;
+.project-description {
+    margin: 44px 0;
+    padding: 0 16px;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .text-understate {
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        padding-bottom: 8px;
+    }
+
+    p {
+        width: 1000px;
+        font-size: 18px;
+    }
+
 }
 
-p {
-    font-size: 18px;
-}
 
 /*Photography*/
 
@@ -226,6 +238,8 @@ footer {
 .contact-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin: 16px;
 
     .contact-title {
@@ -236,6 +250,7 @@ footer {
     }
 
     .contact-body {
+        width: 100%;
         font-size: 20px;
         padding-bottom: 32px;
 
@@ -254,5 +269,25 @@ footer {
         font-size: 32px;
         font-weight: 600;
         color: $accent-color;
+    }
+}
+
+
+@media screen and (min-width: 720px) {
+
+    .about {
+        width: 100%;
+
+        p {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 32px;
+            font-weight: 500;
+        }
+    }
+
+
+    .contact-wrapper {
+        margin: 0 auto;
     }
 }

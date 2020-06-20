@@ -3,27 +3,28 @@ layout: default
 title: "da Horta"
 order: 4
 label: project04
-image: dahorta.jpg
+image: dahorta.png
 image_alt: da Horta App
 description:  "— Creating a fresh products platform to increase the sales of local farmers."
 ---
 
 <article>
-   <section class="project-photo">
-       <img src="{{ site.baseurl }}/images/work/dahorta.png" alt="Floppy Disk" class="work-img">
-   </section>
+   <div class="project-photo">
+       <img src="{{ site.baseurl }}/images/thumbnail/dahorta.png" alt="Floppy Disk" class="work-img">
+   </div>
     
-    <section class="project-description">
+    <div class="project-description">
         <h2>Da Horta</h2>
 
         <p class="text-understate">UX/UI Design</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </section>
+        <p>During Covid-19 pandemic that affected the world in March 2020 has severely affected the national economy. The surplus of production in the agriculture sector, added to the difficulty of access to supermarkets, created problems for both producers and consumers.
+        Our product arises as response for this needs and in order to help the farmers to drain the products.</p>
+    </div>
     
       {% for image in site.works %}
        <figure>
-           <img src="{{ site.baseurl }}/images/work/{{ image.image }}" alt="da Horta - App" class="work-img">
+           <img src="{{ site.baseurl }}/images/thumbnail/{{ image.image }}" alt="da Horta - App" class="work-img">
        </figure>
        {% endfor %}
 </article>
